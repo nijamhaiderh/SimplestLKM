@@ -24,10 +24,6 @@ ls -al /lib/modules/4.15.0-23-generic/'''
           steps {
             sh '''make
 dmesg -c
-insmod hello.ko
-dmesg
-rmmod hello.ko
-dmesg
 '''
           }
         }
