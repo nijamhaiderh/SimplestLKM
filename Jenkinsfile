@@ -10,7 +10,7 @@ pipeline {
     stage('Build') {
       steps {
         sh '''/bin/bash
-apt-get update apt-get install make make'''
+apt-get update\\n apt-get install make\\n make'''
       }
     }
   }
