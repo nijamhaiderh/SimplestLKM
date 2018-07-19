@@ -1,7 +1,8 @@
 pipeline {
   agent {
-    dockerfile {
-      filename '/home/epl/Downloads/286f30ec2cbc.gz'
+    docker {
+      image 'ubuntu:latest'
+      args '-it -u root --cap-add=ALL -v /lib/modules:/lib/modules -v /usr/src:/usr/src'
     }
 
   }
