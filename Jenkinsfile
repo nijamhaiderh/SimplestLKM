@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       args '-p 3000:3000'
-      image 'ubuntu:latest festive_wozniak'
+      image '60dc8024350f'
     }
 
   }
