@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       image 'gcc:latest'
-      args '-u root --cap-add=ALL -v /lib/modules:/lib/modules -v /usr/src:/usr/src'
+      args '-it -u root --cap-add=ALL -v /lib/modules:/lib/modules -v /usr/src:/usr/src'
     }
 
   }
