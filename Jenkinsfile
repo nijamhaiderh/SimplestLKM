@@ -10,7 +10,8 @@ pipeline {
     stage('Build') {
       steps {
         sh '''
-ls -al /lib/modules/'''
+ls -al /lib/modules/
+make'''
       }
     }
   }
