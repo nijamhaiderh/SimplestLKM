@@ -9,8 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''sudo apt-get install make
-make'''
+        sh 'whoami'
       }
     }
   }
