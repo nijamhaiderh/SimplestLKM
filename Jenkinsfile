@@ -20,6 +20,11 @@ ls -al /lib/modules/4.15.0-23-generic/'''
             sh 'ls -al /usr/src/'
           }
         }
+        stage('make') {
+          steps {
+            sh 'make'
+          }
+        }
       }
     }
   }
