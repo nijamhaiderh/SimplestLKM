@@ -9,7 +9,9 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'ls /bin/'
+        sh '''su root
+apt-get update
+apt-get install make'''
       }
     }
   }
