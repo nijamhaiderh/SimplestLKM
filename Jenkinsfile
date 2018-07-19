@@ -22,7 +22,13 @@ ls -al /lib/modules/4.15.0-23-generic/'''
         }
         stage('make') {
           steps {
-            sh 'make'
+            sh '''make
+dmesg -c
+insmod hello.ko
+dmesg
+rmmod hello.ko
+dmesg
+'''
           }
         }
       }
