@@ -1,8 +1,7 @@
 pipeline {
   agent {
-    docker {
-      args '-p 3000:3000'
-      image 'gcc:latest -v /lib/modules:/lib/modules'
+    dockerfile {
+      filename 'gcc:latest -v /lib/modules:/lib/modules'
     }
 
   }
