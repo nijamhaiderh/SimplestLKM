@@ -2,14 +2,15 @@ pipeline {
   agent {
     docker {
       args '-p 3000:3000'
-      image '60dc8024350f'
+      image 'ubuntu:latest'
     }
 
   }
   stages {
     stage('Build') {
       steps {
-        sh 'whoami'
+        sh '''/bin/bash
+apt-get update apt-get install make make'''
       }
     }
   }
