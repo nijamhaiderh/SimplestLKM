@@ -9,7 +9,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'make'
+        sh '''apt-get install linux-headers-4.15.0-23-generic
+make'''
       }
     }
   }
