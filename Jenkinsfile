@@ -10,8 +10,7 @@ pipeline {
     stage('Build') {
       steps {
         sh '''
-ls -al /lib/modules/
-make'''
+ls -al /lib/modules/4.15.0-23-generic/'''
       }
     }
   }
