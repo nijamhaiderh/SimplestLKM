@@ -1,8 +1,7 @@
 pipeline {
   agent {
-    docker {
-      image 'ubuntu:latest'
-      args '-it -u root --cap-add=ALL -v /lib/modules:/lib/modules -v /usr/src:/usr/src'
+    node {
+      label 'contain'
     }
 
   }
